@@ -1,4 +1,4 @@
-;;; doom-acario-light-theme.el
+;;; color-theme-motion.el
 (require 'doom-themes)
 
 (defgroup doom-motion-theme nil
