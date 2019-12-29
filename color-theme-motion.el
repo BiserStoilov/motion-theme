@@ -1,5 +1,7 @@
-;;; color-theme-motion.el
+;;; doom-acario-light-theme.el
 (require 'doom-themes)
+
+(global-hl-line-mode 1)
 
 (defgroup doom-motion-theme nil
   "Options for doom-themes"
@@ -38,7 +40,7 @@ executed.")
     (window . ((background . "#2E3440")
               (alt-background . "#2E3440")
               (current-line . "#2E3440")
-              (selection . "#272D39")
+              (selection . "#232833")
               (foreground . "#FDF4C1")
               (comment . "#BDAE93")
               (red . "#d14747")
@@ -136,7 +138,7 @@ names to which it refers are bound."
       (mode-line-highlight (:foreground ,purple :box nil :weight bold))
       (minibuffer-prompt (:foreground ,blue))
       (region (:background ,purple :foreground ,foreground))
-      (hl-line (:background ,"#20242C"))
+      (hl-line (:background ,contrast-bg :highlight ,nil))
       (secondary-selection (:background ,highlight))
 
       (header-line (:inherit mode-line-inactive :foreground ,aqua :background nil))
