@@ -1421,7 +1421,7 @@ are bound."
         (custom-theme-set-variables
          ',name
          `(frame-background-mode ',background-mode)
-         `(beacon-color ,red)
+         `(beacon-color ,aqua)
          `(fci-rule-color ,contrast-bg)
          `(vc-annotate-color-map
            '((20  . ,red)
