@@ -1,4 +1,4 @@
-;;; doom-acario-light-theme.el
+;;; color-theme-motion.el
 (require 'doom-themes)
 
 (global-hl-line-mode 1)
@@ -24,7 +24,7 @@ upon the display characteristics of the frame in which it is
 executed.")
 
 (defconst color-theme-motion-colors
-  '((terminal . ((background . "#000000")
+  '((terminal . ((background . "ARGBBB000000")
               (alt-background . "#000000")
               (current-line . "#000000")
               (selection . "#000000")
@@ -115,8 +115,23 @@ names to which it refers are bound."
       (warning (:foreground ,orange))
       (tooltip (:foreground ,yellow :background ,background :inverse-video t))
 
+
+      (lsp-ui-doc-background ((t (:background nil))))
+      (lsp-ui-doc-header ((t (:inherit (font-lock-string-face italic)))))
+      (lsp-ui-sideline-symbol (
+        :background ,contrast-bg :foreground ,foreground :weight regular 
+        :box (
+          :line-width -1 :color ,background) 
+        :height 0.88))
+      (lsp-ui-sideline-current-symbol (
+        :background ,contrast-bg :foreground ,orange :weight bold 
+        :box (
+          :line-width -1 :color ,background) 
+        :height 0.88))
+      
+
       ;; Emacs interface
-      (cursor (:background ,red))
+      (cursor (:background ,foreground))
       (fringe (:background ,low-contrast-bg :foreground ,comment))
       (linum (:background ,low-contrast-bg :foreground ,comment :italic nil :underline nil))
       (line-number (:background ,low-contrast-bg :foreground ,comment))
@@ -137,7 +152,8 @@ names to which it refers are bound."
       (mode-line-emphasis (:foreground ,foreground :slant italic))
       (mode-line-highlight (:foreground ,purple :box nil :weight bold))
       (minibuffer-prompt (:foreground ,blue))
-      (region (:background ,purple :foreground ,foreground))
+      (region (:background "#3B4551" :foreground ,foreground))
+      ;(region (:background ,aqua :foreground ,foreground))
       (hl-line (:background ,contrast-bg :highlight ,nil))
       (secondary-selection (:background ,highlight))
 
@@ -989,7 +1005,7 @@ names to which it refers are bound."
       (ivy-action (:foreground ,purple))
       (ivy-confirm-face (:foreground ,green))
       (ivy-current-match (:foreground ,green :inherit highlight :underline nil))
-      (ivy-cursor (:background ,contrast-bg))
+      (ivy-cursor (:background ,foreground))
       (ivy-match-required-face (:foreground ,red :background ,background))
       (ivy-remote (:foreground ,orange))
       (ivy-subdir (:foreground ,purple))
@@ -1400,7 +1416,7 @@ are bound."
    `(((background-color . ,background)
       (background-mode . light)
       (border-color . ,foreground)
-      (cursor-color . ,red)
+      (cursor-color . ,foreground)
       (foreground-color . ,foreground)
       (mouse-color . ,aqua)))))
 
@@ -1421,7 +1437,7 @@ are bound."
         (custom-theme-set-variables
          ',name
          `(frame-background-mode ',background-mode)
-         `(beacon-color ,aqua)
+         `(beacon-color ,foreground)
          `(fci-rule-color ,contrast-bg)
          `(vc-annotate-color-map
            '((20  . ,red)
