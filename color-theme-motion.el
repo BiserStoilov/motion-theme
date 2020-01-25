@@ -1403,6 +1403,9 @@ names to which it refers are bound."
       (ztreep-header-face (:forground ,yellow :weight bold))
       (ztreep-leaf-face (:foreground ,aqua))
       (ztreep-node-face (:foreground ,foreground))
+
+      ;; pylint
+      (pyenv-active-python-face (:foreground ,green :background nil))
       ))))
 
 (defmacro color-theme-motion--frame-parameter-specs ()
