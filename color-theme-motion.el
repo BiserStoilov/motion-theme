@@ -206,6 +206,17 @@ names to which it refers are bound."
       (custom-group-tag (:foreground ,blue))
       (custom-state (:foreground ,green))
 
+      ;; indent-guides
+      (highlight-indent-guides-odd-face (:foreground ,blue))
+      (highlight-indent-guides-even-face (:foreground ,blue))
+      (highlight-indent-guides-character-face (:foreground ,blue))
+      (highlight-indent-guides-top-odd-face (:foreground ,blue))
+      (highlight-indent-guides-top-even-face (:foreground ,blue))
+      (highlight-indent-guides-top-character-face (:foreground ,green))
+      (highlight-indent-guides-stack-odd-face (:foreground ,blue))
+      (highlight-indent-guides-stack-even-face (:foreground ,blue))
+      (highlight-indent-guides-stack-character-face (:foreground ,blue))
+
       ;; diff-mode (built-in)
       (diff-added (:foreground ,green))
       (diff-changed (:foreground ,blue))
