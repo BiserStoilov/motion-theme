@@ -1025,6 +1025,7 @@ names to which it refers are bound."
       (ivy-minibuffer-match-face-2 (:foreground ,yellow))
       (ivy-minibuffer-match-face-3 (:foreground ,blue))
       (ivy-minibuffer-match-face-4 (:foreground ,orange))
+      (ivy-posframe-border (:background ,comment))
 
       ;; Jabber
       (jabber-chat-prompt-local (:foreground ,yellow))
