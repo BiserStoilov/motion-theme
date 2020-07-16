@@ -34,16 +34,16 @@ determine the exact padding."
 
   ;; name        gui       256       16
   ((bg         '("#1d2021" nil       nil))
-   (bg-alt     '("#111414" nil       nil))
-   (bg-alt2     '("#111414" nil       nil))
+   (bg-alt     '("#33393B" nil       nil))
+   (bg-alt2    '("#33393B" nil       nil))
 
    (base0      '("#111414" "black"   "black"      )) ; (self-defined)
-   (base1      '("#111414" "#1d1d1d" "brightblack")) ; bg0_h
-   (base2      '("#111414" "#282828" "brightblack")) ; bg0
-   (base3      '("#111414" "#282828" "brightblack")) ; bg1
-   (base4      '("#00839F" "#5c5c5c" "brightblack")) ; bg3
-   (base5      '("#83a598" "#6f6f6f" "brightblack")) ; bg4
-   (base6      '("#d79921" "#909090" "brightblack")) ; gray
+   (base1      '("#1d2021" "#1d1d1d" "brightblack")) ; bg0_h
+   (base2      '("#33393B" "#282828" "brightblack")) ; bg0
+   (base3      '("#1d2021" "#282828" "brightblack")) ; bg1
+   (base4      '("#33393B" "#5c5c5c" "brightblack")) ; bg3
+   (base5      '("#1d2021" "#6f6f6f" "brightblack")) ; bg4
+   (base6      '("#33393B" "#909090" "brightblack")) ; gray
    (base7      '("#ebdbb2" "#cccccc" "brightblack")) ; fg2
    (base8      '("#ebdbb2" "#fbfbfb" "brightwhite")) ; fg0
    (fg         '("#ebdbb2" "#dfdfdf" "brightwhite")) ; fg/fg1
@@ -64,24 +64,24 @@ determine the exact padding."
    (dark-cyan  '("#8ec07c" "#ffb964" "cyan"))          ; aqua
 
 
-;; --color0: #282828;
-;; --color1: #cc241d;
-;; --color2: #98971a;
-;; --color3: #d79921;
-;; --color4: #458588;
-;; --color5: #b16286;
-;; --color6: #689d6a;
-;; --color7: #a89984;
-;; --color8: #928374;
-;; --color9: #fb4934;
-;; --color10: #b8bb26;
-;; --color11: #fabd2f;
-;; --color12: #83a598;
-;; --color13: #d3869b;
-;; --color14: #8ec07c;
-;; --color15: #ebdbb2;
-;; --color256: #1d2021;
-;; --color257: #ebdbb2;
+   ;; --color0: #282828;
+   ;; --color1: #cc241d;
+   ;; --color2: #98971a;
+   ;; --color3: #d79921;
+   ;; --color4: #458588;
+   ;; --color5: #b16286;
+   ;; --color6: #689d6a;
+   ;; --color7: #a89984;
+   ;; --color8: #928374;
+   ;; --color9: #fb4934;
+   ;; --color10: #b8bb26;
+   ;; --color11: #fabd2f;
+   ;; --color12: #83a598;
+   ;; --color13: #d3869b;
+   ;; --color14: #8ec07c;
+   ;; --color15: #ebdbb2;
+   ;; --color256: #1d2021;
+   ;; --color257: #ebdbb2;
 
 
 
@@ -101,7 +101,7 @@ determine the exact padding."
    (strings        green)
    (variables      cyan)
    (numbers        violet)
-   (region         bg-alt2)
+   (region         violet)
    (error          red)
    (warning        yellow)
    (success        green)
@@ -122,14 +122,15 @@ determine the exact padding."
   ;; --- extra faces ------------------------
   (
    ;;;;;;;; Editor ;;;;;;;;
-   (cursor :background "white")
+   (cursor :background orange)
+   (region :background base0 :foreground yellow)
    (hl-line :background bg-alt)
-   ((line-number &override) :foreground base5)
+   ((line-number &override) :foreground cyan)
    ((line-number-current-line &override) :background bg-alt2 :foreground fg :bold t)
 
    ;; Vimish-fold
    ((vimish-fold-overlay &override) :inherit 'font-lock-comment-face :background bg-alt2 :weight 'light)
-   ((vimish-fold-mouse-face &override) :foreground "white" :background yellow :weight 'light)
+   ((vimish-fold-mouse-face &override) :foreground fg :background yellow :weight 'light)
    ((vimish-fold-fringe &override) :foreground magenta :background magenta)
 
    ;;;;;;;; Doom-modeline ;;;;;;;;
@@ -305,44 +306,44 @@ determine the exact padding."
    (web-mode-html-attr-name-face   :foreground cyan)
    (web-mode-json-key-face         :foreground green)
    (web-mode-json-context-face     :foreground cyan)
-   
-      ;; FIX
-    (alert-urgent-face :foreground red :weight 'bold)
-    (aw-leading-char-face :foreground red)
-    (breakpoint-enabled :foreground red :weight 'bold)
-    (company-echo-common :foreground red)
-    (cscope-line-number-face :foreground red)
-    (cscope-separator-face :foreground red :overline t :underline t :weight 'bold)
-    (dashbm-ff-suid :extend t :background red :foreground fg)
-    (helm-separator :extend t :foreground red)
-    (info-menu-star :foreground red)
-    (js2-error :foreground red)
-    (lsp-ui-doc-background :background nil)
-    (magit-diff-file-heading-selection :background fg :foreground red :weight 'bold)
-    (magit-header-line :background blue :foreground fg :weight 'bold)
-    (neo-dir-link-face :height 94)
-    (neo-file-link-face :height 94)
-    (org-mode-line-clock-overrun :background red)
-    (pyenv-active-python-face :foreground red :weight 'bold)
-    (show-paren-mismatch :background red)
-    (sp-show-pair-mismatch-face :background red)
-    (sp-wrap-overlay-closing-pair :foreground red)
-    (speedbar-selected-face :foreground red :underline t)
-    (sunrise-clex-hotchar-face :foreground red :weight 'bold)
-    (sunrise-editing-path-face :background red :foreground fg :weight 'bold :height 120)
-    (sunrise-highlight-path-face :background blue :foreground fg :weight 'bold :height 120)
-    (term-color-magenta :background red :foreground fg)
-    (term-color-red :background red :foreground fg)
-    (term-color-white :background cyan :foreground fg)
-    (term-color-yellow :background green :foreground fg)
-    (transient-amaranth :foreground red)
-    (transient-blue :foreground blue)
-    (transient-disabled-suffix :background red :foreground fg :weight 'bold)
-    (transient-enabled-suffix :background cyan :foreground fg :weight 'bold)
-    (transient-pink :foreground red)
-    (transient-red :foreground red)
-   
-   
+
+   ;; FIX
+   (alert-urgent-face :foreground red :weight 'bold)
+   (aw-leading-char-face :foreground red)
+   (breakpoint-enabled :foreground red :weight 'bold)
+   (company-echo-common :foreground red)
+   (cscope-line-number-face :foreground red)
+   (cscope-separator-face :foreground red :overline t :underline t :weight 'bold)
+   (dashbm-ff-suid :extend t :background red :foreground fg)
+   (helm-separator :extend t :foreground red)
+   (info-menu-star :foreground red)
+   (js2-error :foreground red)
+   (lsp-ui-doc-background :background nil)
+   (magit-diff-file-heading-selection :background fg :foreground red :weight 'bold)
+   (magit-header-line :background blue :foreground fg :weight 'bold)
+   (neo-dir-link-face :height 94)
+   (neo-file-link-face :height 94)
+   (org-mode-line-clock-overrun :background red)
+   (pyenv-active-python-face :foreground red :weight 'bold)
+   (show-paren-mismatch :background red)
+   (sp-show-pair-mismatch-face :background red)
+   (sp-wrap-overlay-closing-pair :foreground red)
+   (speedbar-selected-face :foreground red :underline t)
+   (sunrise-clex-hotchar-face :foreground red :weight 'bold)
+   (sunrise-editing-path-face :background red :foreground fg :weight 'bold)
+   (sunrise-highlight-path-face :background blue :foreground fg :weight 'bold)
+   (term-color-magenta :background red :foreground fg)
+   (term-color-red :background red :foreground fg)
+   (term-color-white :background cyan :foreground fg)
+   (term-color-yellow :background green :foreground fg)
+   (transient-amaranth :foreground red)
+   (transient-blue :foreground blue)
+   (transient-disabled-suffix :background red :foreground fg :weight 'bold)
+   (transient-enabled-suffix :background cyan :foreground fg :weight 'bold)
+   (transient-pink :foreground red)
+   (transient-red :foreground red)
+
+
    )
   ;; --- extra variables --------------------
 
