@@ -34,34 +34,34 @@ determine the exact padding."
 
   ;; name        gui       256       16
   ((bg         '("#1d2021" nil       nil))
-   (bg-alt     '("#33393B" nil       nil))
+   (bg-alt     '("#111415" nil       nil))
    (bg-alt2    '("#33393B" nil       nil))
 
    (base0      '("#111414" "black"   "black"      )) ; (self-defined)
-   (base1      '("#1d2021" "#1d1d1d" "brightblack")) ; bg0_h
-   (base2      '("#33393B" "#282828" "brightblack")) ; bg0
-   (base3      '("#1d2021" "#282828" "brightblack")) ; bg1
-   (base4      '("#33393B" "#5c5c5c" "brightblack")) ; bg3
-   (base5      '("#1d2021" "#6f6f6f" "brightblack")) ; bg4
-   (base6      '("#33393B" "#909090" "brightblack")) ; gray
-   (base7      '("#ebdbb2" "#cccccc" "brightblack")) ; fg2
-   (base8      '("#ebdbb2" "#fbfbfb" "brightwhite")) ; fg0
-   (fg         '("#ebdbb2" "#dfdfdf" "brightwhite")) ; fg/fg1
-   (fg-alt     '("#ebdbb2" "#cccccc" "brightwhite")) ; fg2
+   (base1      '("#1d2021" "#1d2021" "brightblack")) ; bg0_h
+   (base2      '("#33393B" "#33393B" "brightblack")) ; bg0
+   (base3      '("#111414" "#111414" "brightblack")) ; bg1
+   (base4      '("#33393B" "#33393B" "brightblack")) ; bg3
+   (base5      '("#1d2021" "#1d2021" "brightblack")) ; bg4
+   (base6      '("#33393B" "#33393B" "brightblack")) ; gray
+   (base7      '("#ebdbb2" "#ebdbb2" "brightblack")) ; fg2
+   (base8      '("#ebdbb2" "#ebdbb2" "brightwhite")) ; fg0
+   (fg         '("#ebdbb2" "#ebdbb2" "brightwhite")) ; fg/fg1
+   (fg-alt     '("#ebdbb2" "#ebdbb2" "brightwhite")) ; fg2
 
-   (grey       '("#00839F" "#909090" "brightblack"))   ; gray
+   (grey       '("#00839F" "#00839F" "brightblack"))   ; gray
    (red        '("#e74c3c" "#e74c3c" "red"))           ; bright-red
-   (magenta    '("#e74c3c" "#CF6A4C" "magenta"))       ; red
+   (magenta    '("#e74c3c" "#e74c3c" "magenta"))       ; red
    (violet     '("#458588" "#458588" "brightmagenta")) ; bright-purple
    (orange     '("#d79921" "#d79921" "orange"))        ; bright-orange
    (yellow     '("#ffb964" "#ffb964" "yellow"))        ; bright-yellow
    (teal       '("#5e8d60" "#5e8d60" "green"))         ; bright-aqua
-   (green      '("#ffb964" "#b8bb26" "green"))         ; bright-green
+   (green      '("#ffb964" "#ffb964" "green"))         ; bright-green
    (dark-green '("#98971a" "#98971a" "green"))         ; green
    (blue       '("#00839F" "#00839F" "brightblue"))    ; bright-blue
    (dark-blue  '("#458588" "#458588" "blue"))          ; blue
-   (cyan       '("#83a598" "#689d6a" "brightcyan"))    ; bright-aqua
-   (dark-cyan  '("#8ec07c" "#ffb964" "cyan"))          ; aqua
+   (cyan       '("#83a598" "#83a598" "brightcyan"))    ; bright-aqua
+   (dark-cyan  '("#8ec07c" "#8ec07c" "cyan"))          ; aqua
 
 
    ;; --color0: #282828;
@@ -139,7 +139,7 @@ determine the exact padding."
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color base3)))
 
    (mode-line-inactive
-    :background bg :foreground base4
+    :background bg-alt :foreground base7
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color base2)))
 
    ;; File-name
